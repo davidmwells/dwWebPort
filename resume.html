@@ -234,7 +234,8 @@
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
       <!-- Start content edits below this line. -->
-      <p>© 2023 by Your Name | <a href="mailto:email@example.com" class="btn">email@example.com</a></p>
+      <!-- <p>© 2023 by Your Name | <a href="mailto:email@example.com" class="btn">email@example.com</a></p> -->
+      <p>&copy; <span id="copyright-year"></span> David Wells</p>
 
       <!-- Add or remove any networks. -->
       <ul class="socials">
@@ -260,5 +261,13 @@
       
       <!-- End content edits here. -->
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const yearSpan = document.getElementById('copyright-year');
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+      });
+    </script>
   </body>
 </html>
