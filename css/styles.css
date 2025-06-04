@@ -1,0 +1,345 @@
+/*
+ORIGINAL COLOR PALETTE              NEW COLOR PALETTE FOR DW PORTFOLIO
+
+Dark green  #3c8453                 Honolulu Blue       #2c7caf
+Sandy beige #bcaa96                 Columbia Blue       #bed6f6
+Dark gray   #222222                 Baby Powder         #f8f7f3
+Light gray  #d3d4d6                 Champagne           #F5E3CC
+Off-white   #f6f6f6                 Earth Yellow        #e5b678
+
+SITE FONTS
+Caveat
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+Open Sans
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+*/
+
+/* GLOBAL STYLES 
+--------------------------------------------------*/
+
+/* IMPORT GOOGLE FONTS ----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*
+    https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* set default to 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f8f7f3;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+h1, h2, h3 {
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 0.85;
+}
+
+h2 {
+    font-size: 3.6rem;
+    color:#e5b678;
+}
+
+h3 {
+    font-size: 2.4rem;
+    color:#2c7caf;
+}
+
+/* links */
+a {
+    color: #2c7caf;
+}
+
+a:hover {
+    color: #bed6f6;
+    text-decoration: none;
+}
+
+.btn {
+    background:#2c7caf;
+    color:#F5E3CC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: #bed6f6;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+.name {
+    color: #2c7caf;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+footer a {
+    color: #e5b678;
+}
+
+footer a:hover {
+    color: #2c7caf;
+}
+
+/* HOME
+--------------------------------------------------*/
+
+.home {
+    background: url(../images/bg-home-office-bookshelf.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+
+.home .content-wrapper h1 {
+    color: #2c7caf;
+}
+
+.home .content-wrapper h2 {
+    color: #f8f7f3;
+}
+
+.content-bg {
+    background-color: #bed6f6dd;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 650px) {
+    .home .content-wrapper {
+        padding: 10px
+    }
+
+    .content-bg {
+        padding: 20px;
+    }
+}
+
+
+/* RESUME
+--------------------------------------------------*/
+/* .resume header::before */
+.resume header {
+    background: url(../images/bg-home-office-bookshelf.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 750px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.resume header .content-wrapper {
+    background-color: #bed6f6dd;
+    /* position: absolute;
+    top: 15rem;
+    left: 50%; */
+    border-radius: 15px;
+}
+
+.resume header .content-wrapper h2 {
+    color: #f8f7f3
+}
+
+.resume-section {
+    margin-bottom: 50px;
+}
+
+.resume-section h2 {
+    border-bottom: 2px dashed #f8f7f3;
+}
+
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width; 500px) {
+    .resume header::before {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 5rem; 
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+}
+
+/* Projects
+--------------------------------------------------*/
+.project-item {
+    /* display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    row-gap: 30px; */
+    margin: 30px 0;
+}
+
+.project-item img {
+    width: 280px;
+    /* float: left;
+    margin-right: 20px; */
+}
+
+.project-details p:first-child {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 860px) {
+    .project-item {
+        display: flow-root;
+    }
+
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 859px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    .project-item img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Work Experience
+--------------------------------------------------*/
+.work-item {
+    margin: 30px 0;
+}
+
+.work-details p {
+    margin: 0;
+}
+
+@media screen and (min-width: 860px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+
+    .work-summary p:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Education 
+--------------------------------------------------*/
+.education-item {
+    margin: 30px 0;
+}
+.education-item p {
+    margin: 0;
+}
+
+
+/* FOOTER
+--------------------------------------------------*/
+
+footer {
+    background: #bed6f6;
+    color: #2c7caf;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.socials img {
+    width: 32px;
+}
+
+.socials img:hover {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 860px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 859px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
